@@ -10,9 +10,15 @@
                     <div class="card-header">{{ __('Category Dashboard') }}</div>
 
                     <div class="card-body">
-                        @if (session('success'))
+                        {{-- @if (session('success'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('success') }}
+                            </div>
+                        @endif --}}
+                        @if (session('success'))
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                <strong>Success!</strong> {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
 
