@@ -24,17 +24,17 @@
                                     @csrf
                                     <div class="form-group mb-3">
                                         <label for="title">Title</label>
-                                        <input type="text" class="form-control" id="title" name="title">
+                                        <input type="text" class="form-control" value="{{ old('title') }}" id="title" name="title">
                                         @error('title')
-                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label for="body">Content</label>
-                                        <textarea class="form-control" id="content" name="content"></textarea>
+                                        <textarea class="form-control" id="content" name="content">{{ old('content') }}</textarea>
                                         @error('content')
-                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
 
@@ -42,19 +42,21 @@
                                         <label for="image">Image</label>
                                         <input type="file" class="form-control" id="image" name="image">
                                         @error('image')
-                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
+
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label for="category">Category</label>
-                                        <select class="form-control mt-2" id="category" name="category_id" required>
+                                        <select class="form-control mt-2" id="category" name="category_id">
+                                            <option value="" disabled selected>Select a category</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                                             @endforeach
                                         </select>
                                         @error('category_id')
-                                            <div class="alert alert-danger mt-1">{{ $message }}</div>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group mb-3">
