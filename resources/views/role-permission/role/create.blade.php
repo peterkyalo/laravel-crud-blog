@@ -25,9 +25,9 @@
                                 <form action="{{ route('roles.store') }}" method="POST">
                                     @csrf
                                     <div class="form-group mb-3">
-                                        <label for="title">Permission Name</label>
+                                        <label for="title">Role Name</label>
                                         <input type="text" class="form-control" value="{{ old('name') }}"
-                                            id="name" name="name">
+                                            id="name" name="name" placeholder="Enter role name" >
                                         @error('name')
                                             <p class="text-danger">{{ $message }}</p>
                                         @enderror

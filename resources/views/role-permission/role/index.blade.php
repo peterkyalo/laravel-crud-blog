@@ -25,7 +25,7 @@
 
                         <div class="card">
                             <div class="card-header d-flex justify-content-between">
-                                <h4>All Roles</h4>
+                                <h4>Roles List</h4>
                                 <a class="btn btn-primary" href="{{ route('roles.create') }}">Create Role</a>
                             </div>
                             <div class="card body p-5">
