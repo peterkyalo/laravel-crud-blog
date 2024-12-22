@@ -26,10 +26,10 @@
                                     @csrf
                                     <div class="form-group mb-3">
                                         <label for="title">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Enter category name">
+                                        <input type="text" class="form-control" value="{{ old('name') }}"
+                                            id="name" name="name" placeholder="Enter category name">
                                         @error('name')
-                                            <div class="text-danger">{{ $message }}</div>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group mb-3">
