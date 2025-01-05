@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,9 @@ Route::delete('/categories/{category}/delete', [CategoryController::class, 'dest
 
 // ---- Permission Routes ----
 Route::resource('permissions', PermissionController::class);
+
+// ------Users Routes-------------
+Route::resource('users', UserController::class);
 
 // ---- Role Routes ----
 Route::resource('roles', RoleController::class);

@@ -75,7 +75,7 @@ class RoleController extends Controller
     public function destroy(Role $role)
     {
         $role->delete();
-        return redirect()->route('roles.index')->with('success', 'Role deleted successfully.');
+        return redirect()->route('roles.index')->with('success', 'Role deleted successfully!.');
     }
 
     // Assign permission to role
@@ -94,6 +94,6 @@ class RoleController extends Controller
         $role = Role::findOrFail($roleId);
         // dd($request->permission);
         $role->syncPermissions($request->permission);
-        return redirect()->route('roles.index')->with('success', 'Permissions assigned to role successfully.');
+        return redirect()->route('roles.index')->with('success', 'Permissions assigned to role successfully!.');
     }
 }
