@@ -50,6 +50,8 @@
                                                     <div class="d-flex">
                                                         <a href="{{ route('roles.edit', $role) }}"
                                                             class="btn btn-primary btn-sm me-2">Edit</a>
+                                                        <a href="{{ route('roles.assignPermission', $role) }}"
+                                                            class="btn btn-success btn-sm me-2">Assign Permission</a>
                                                         <form action="{{ route('roles.destroy', $role) }}" method="POST">
                                                             @csrf
                                                             @method('DELETE')

@@ -49,9 +49,9 @@
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="{{ route('categories.edit', $category) }}"
-                                                                class="btn btn-warning mr-5">Edit</a>
+                                                                class="btn btn-warning me-2">Edit</a>
                                                             <a href="{{ route('categories.show', $category) }}"
-                                                                class="btn btn-success mr-5">Show</a>
+                                                                class="btn btn-success me-2">Show</a>
                                                             <form action="{{ route('categories.destroy', $category) }}"
                                                                 method="POST">
                                                                 @csrf

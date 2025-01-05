@@ -39,3 +39,5 @@ Route::resource('permissions', PermissionController::class);
 
 // ---- Role Routes ----
 Route::resource('roles', RoleController::class);
+Route::get('roles/{roleId}/assign-permission', [RoleController::class, 'assignPermissionToRole'])->name('roles.assignPermission');
+Route::put('roles/{roleId}/assign-permission', [RoleController::class, 'givePermissionToRole'])->name('roles.givePermission');

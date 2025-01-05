@@ -65,10 +65,13 @@
                             <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('permissions.index') }}">Permission</a>
+                            <a class="nav-link" href="{{ route('permissions.index') }}">Permissions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Roles</a>
+                            <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('roles.index') }}">Users</a>
                         </li>
 
                     </ul>
